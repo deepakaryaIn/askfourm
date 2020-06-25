@@ -52,7 +52,7 @@ class _SearchPageState extends State<SearchPage>  with AutomaticKeepAliveClientM
             ),
           ),
           filled: true,
-          prefixIcon: Icon(Icons.person_pin, color: Colors.red, size: 30.0,),
+          prefixIcon: Icon(Icons.search, color: Colors.red, size: 30.0,),
           suffixIcon: IconButton(icon: Icon(Icons.clear, color:  Colors.red,), onPressed: emptyTheTextFormField,)
         ),
         onFieldSubmitted: controlSearching,
@@ -67,8 +67,8 @@ class _SearchPageState extends State<SearchPage>  with AutomaticKeepAliveClientM
         child: ListView(
           shrinkWrap: true,
           children: <Widget>[
-            Icon(Icons.group, color: Colors.grey , size: 200.0,),
-            Text("Search User",
+            Icon(Icons.search, color: Colors.grey , size: 200.0,),
+            Text("Search",
             textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.red,
