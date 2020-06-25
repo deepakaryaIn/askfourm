@@ -32,6 +32,15 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
   TextEditingController groupTextEditingController = TextEditingController();
   TextEditingController locationTextEditingController = TextEditingController();
 
+  postWithoutImage() {
+    //To Implement
+  }
+  postWithVideo() {
+    //To Implement
+  }
+  postWithAudio() {
+ //To Implement
+  }
 
   captureImageWithCamera() async{
     Navigator.pop(context);
@@ -59,8 +68,12 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
     return showDialog(context: mContext,
     builder: (context){
       return SimpleDialog(
-        title: Text("Add Image", style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+        title: Text("New Post", style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
         children: <Widget>[
+          SimpleDialogOption(
+            child: Text("New Post",style: TextStyle(color: Colors.white),),
+            onPressed: postWithoutImage,
+          ),
           SimpleDialogOption(
             child: Text("Capture Image with Camera",style: TextStyle(color: Colors.white),),
             onPressed: captureImageWithCamera,
@@ -68,6 +81,14 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
           SimpleDialogOption(
             child: Text("Select Image from Gallery",style: TextStyle(color: Colors.white),),
             onPressed: pickImageFromGallery,
+          ),
+          SimpleDialogOption(
+            child: Text("Post With Video",style: TextStyle(color: Colors.white),),
+            onPressed: postWithVideo,
+          ),
+          SimpleDialogOption(
+            child: Text("Post With Audio",style: TextStyle(color: Colors.white),),
+            onPressed: postWithAudio,
           ),
           SimpleDialogOption(
             child: Text("Cancel",style: TextStyle(color: Colors.white),),
@@ -79,7 +100,7 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
     );
   }
 
-/* displayUploadScreen(){
+displayUploadScreen(){
     return Container(
       color: Theme.of(context).accentColor.withOpacity(0.5),
       child: Column(
@@ -104,7 +125,7 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
         ],
       ),
     );
-  }  */
+  }
 
   clearPostInfo(){
     locationTextEditingController.clear();
@@ -134,7 +155,7 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
     });
   }
 
-  controlUploadWithoutImage() async {
+ /* controlUploadWithoutImage() async {
     setState(() {
       uploading = true;
     });
@@ -163,7 +184,7 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
           "location": location,
           "group": group,
         });
-  }
+  } */
 
   controlUploadAndSave() async {
     setState(() {
@@ -209,7 +230,7 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
     return downloadUrl;
   }
 
-  displayUploadNew(){
+ /* displayUploadNew(){
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
@@ -325,7 +346,7 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
         ],
       ),
     );
-  }
+  } */
 
   displayUploadFormScreen(){
     return Scaffold(
@@ -448,6 +469,6 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
 
   @override
   Widget build(BuildContext context) {
-    return file == null ? displayUploadNew() : displayUploadFormScreen()  ;
+    return file == null ? displayUploadScreen() : displayUploadFormScreen()  ;
   }
 }
