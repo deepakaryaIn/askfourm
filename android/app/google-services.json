@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "202399356198",
+    "firebase_url": "https://ask-forum-app.firebaseio.com",
+    "project_id": "ask-forum-app",
+    "storage_bucket": "ask-forum-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202399356198:android:962b2de328bd68e0045de7",
+        "android_client_info": {
+          "package_name": "com.asktohow.askforum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202399356198-87amha7c7ojjkn9klps2dhnm7lrbp64b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.asktohow.askforum",
+            "certificate_hash": "d91dedeecf78c6ebb30724722bba5ea6276387bc"
+          }
+        },
+        {
+          "client_id": "202399356198-ciosm6dmf3ce9be3dod8m0caolpc4aoj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX-sJzgws8xok6dEf72yLqoVZ1RiZkeUM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202399356198-ciosm6dmf3ce9be3dod8m0caolpc4aoj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
